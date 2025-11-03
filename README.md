@@ -13,7 +13,7 @@ It helps users stay organized, motivated, and consistent with their fitness goal
 
 Follow these steps to set up and run the GymTrack application:
 
-```bash
+bash
 # 1️ Clone the repository
 git clone https://github.com/Deekshith422003/gymtrack
 cd gymtrack
@@ -40,6 +40,7 @@ http://127.0.0.1:8000
 
 ---
 
+
 ## Getting Started
 
 1. Open your browser and visit:  
@@ -65,7 +66,7 @@ http://127.0.0.1:8000
 
 ---
 
-##  User Stories
+# User Stories
 
 ###  **US1 – Log Daily Workouts**
 **User Story:**  
@@ -107,7 +108,8 @@ As a user, I want to securely log in and log out so my personal data stays prote
 
 ---
 
-##  Mis-User Stories
+
+# Mis-User Stories
 
 ###  **M1 – Unauthorized Data Access**
 **Mis-User Story:**  
@@ -140,7 +142,8 @@ As a malicious user, I want to repeatedly try different passwords to break into 
 
 ---
 
-##  Architecture Diagrams (C1 – C3)
+
+# Architecture Diagrams (C1 – C3)
 
 The following diagrams illustrate the architectural design of the **GymTrack** web application following the **C4 Model** (Context → Container → Component).
 
@@ -211,7 +214,8 @@ UI → Backend → Authentication Component → Database → JWT Token validatio
 
 ---
 
-###  UI Mockups
+
+# UI Mockups
 
 The mockup below shows the main interface views — including login, workout dashboard, and progress tracking pages.  
 These mockups represent the **core user stories** and help visualize how the app will look and function.
