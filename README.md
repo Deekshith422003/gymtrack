@@ -19,26 +19,21 @@ git clone https://github.com/Deekshith422003/gymtrack
 
 cd gymtrack
 
-# 2️ Create and activate a virtual environment
-python -m venv .venv
-
-.venv\Scripts\activate             # For Windows
-
-# 3️ Build Docker containers
+# 2 Build Docker containers
 docker-compose build
 
-# 4️ Start the containers
-docker-compose up
+# 3 Start the containers
+docker-compose up -d
 
-# 5️ Run database migrations
+# 4 Run database migrations
 docker-compose exec web python manage.py makemigrations
 
 docker-compose exec web python manage.py migrate
 
-# 6️ Create a Django superuser for admin access
+# 5 Create a Django superuser for admin access
 docker-compose exec web python manage.py createsuperuser
 
-# 7️ Access the app in your browser
+# 6 Access the app in your browser
 http://127.0.0.1:8000
 
 ---
