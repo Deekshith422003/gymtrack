@@ -222,5 +222,45 @@ These mockups represent the **core user stories** and help visualize how the app
 
 [![UI Mockups](docs/images/Mockups.drawio.png)](docs/images/Mockups.drawio.png)
 
+---
+
+## AI Use Disclosure
+
+### Tools & Usage Summary
+
+- **Documentation & Planning:** I have used (Gemini/ChatGPT) to help structure user stories for the GymTrack application, improve clarity in the milestone documentation, and refine the formatting of the executive summary and project structure.
+- **Design & Diagrams:** AI assisted in generating initial versions of the C4 Model diagrams (Context, Container, and Component-level ideas) and mockup descriptions based on my instructions. I defined the architecture and data flows, and AI helped format them according to industry standards.
+- **Development (Debugging & Troubleshooting):** All core backend logic, project setup, and system architecture were implemented by me. AI was used only to clarify Django configuration errors, understand command-related issues (Example: Docker, PostgreSQL, migrations), and format README documentation more effectively.
+- **Formatting & Editing:** AI assisted with converting draft content into Markdown format for GitHub, organizing installation steps, and improving text readability.
+
+---
+
+###  Nature of Prompts Used
+
+- **For Documentation:**  
+  - “Rewrite this user story professionally.”  
+  - “Format these installation steps for GitHub README.md file.”  
+  - “How to paste the image in github README file.”
+
+- **For Diagrams/Planning:**  
+  - “Generate a C4 context diagram description for a Django based Gymetrack application.”  
+  - “Help me with structure container interactions between the web client, API, database, and authentication module.”
+
+- **For Debugging:**  
+  - “Explain why this Django migration error occurs.”  
+  - “Clarify Docker compose setup for PostgreSQL connection.”  
+  - “Help improve documentation of JWT authentication steps.”
+
+---
+
+### Ownership Statement
+
+AI tools were used only to refine documentation, format text, assist with diagram organization, and provide guidance for resolving errors.  
+ **All final logic, architectural design, coding decisions, and project implementation were completed by me.** The GymTrack system structure and development reflect my personal understanding and work.
+
+---
+
+
+
 
 
