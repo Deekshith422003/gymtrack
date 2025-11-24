@@ -16,10 +16,12 @@ Follow these steps to set up and run the GymTrack application:
 bash
 # 1️ Clone the repository
 git clone https://github.com/Deekshith422003/gymtrack
+
 cd gymtrack
 
 # 2️ Create and activate a virtual environment
 python -m venv .venv
+
 .venv\Scripts\activate             # For Windows
 
 # 3️ Build Docker containers
@@ -30,6 +32,7 @@ docker-compose up
 
 # 5️ Run database migrations
 docker-compose exec web python manage.py makemigrations
+
 docker-compose exec web python manage.py migrate
 
 # 6️ Create a Django superuser for admin access
