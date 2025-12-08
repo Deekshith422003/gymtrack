@@ -367,10 +367,10 @@ docker compose down**
 
 ###  Screenshots 
 
-* **Login Page** ![Login Page Screenshot](images/login.png)
-* **Dashboard** ![Dashboard Screenshot](images/dashboard.png)
-* **Add Workout** ![Add Workout Screenshot](images/addworkout.png)
-* **Docker** ![Screenshot showing the running Docker containers (web and database services)](images/dockercontainers.png)
+* **Login Page** ![Login Page Screenshot](docs/images/login.png)
+* **Dashboard** ![Dashboard Screenshot](docs/images/dashboard.png)
+* **Add Workout** ![Add Workout Screenshot](docs/addworkout.png)
+* **Docker** ![Screenshot showing the running Docker containers (web and database services)](docs/images/dockercontainers.png)
 
 
 
