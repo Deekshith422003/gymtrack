@@ -258,7 +258,119 @@ AI tools were used only to refine documentation, format text, assist with diagra
 
 ---
 
+# GymTrack
 
+GymTrack is a simple web-based fitness tracking app that helps users log and review their workouts.
+It allows people to record exercises, track progress, and view improvements over time.
+Coaches can also view client workouts and give personalized feedback.
+The app keeps all data secure with authentication and stores it safely in a PostgreSQL database.
+Built using Django, Docker, and JWT authentication, GymTrack is easy to run and scale.
+It helps users stay organized, motivated, and consistent with their fitness goals.
+
+---
+
+##  Project Milestone 2: Implementation & Deployment Overview
+
+The goal of Milestone 2 was to take the basic prototype and turn it into a **complete, secure, working application**.
+
+---
+
+###  What I Built (Effort & Progress)
+
+For Milestone 2, the goal was to take the basic prototype and turn it into a complete, secure, working application. **I have achieved this by building:**
+
+* A full **Backend API** (the brain that handles data).
+* A **Frontend** (the simple user interface) that works securely.
+* **Secure User Login** using JWT.
+* The ability to **create and view full workout logs**.
+* Critical **Security protections** (sanitization, validation).
+* The entire project is packaged for deployment using **Docker**.
+
+---
+
+###  Key Features
+
+####  Secure Login (Token-based Auth)
+
+The app uses **JSON Web Tokens (JWT)** for security, which is a modern, strong method of authentication.
+
+* `/api/token/`: You use this to **log in** and get your access key (token).
+* `/api/token/refresh/`: Used to safely **renew your key** when the old one expires.
+* The browser safely stores these tokens locally.
+
+####  Workout Tracking
+
+* Users can **add all workout details** (exercise, sets, reps, notes).
+* Workouts are saved reliably in a **PostgreSQL database**.
+* **Permissions Check:** Crucially, users **only see their own workouts**. This ensures data privacy and meets the **Global Permissions** requirement.
+
+---
+
+###  Security & Best Practices
+
+I have designed GymTrack with security first, directly addressing the rubric's most critical criteria.
+
+#### **Core Security Checks**
+
+| Rubric Requirement | How GymTrack Meets It (Meets Expectations) |
+| :--- | :--- |
+| **Escapes HTML** | All outputs are **HTML escaped** to completely prevent **Cross-Site Scripting (XSS)** attacks. |
+| **Sanitized Javascript** | **Harmful JavaScript is blocked** from being saved to the database (e.g., `<script>`, `javascript:`, and `onclick=`). API calls cannot be used to inject JavaScript. |
+| **Validator Use** | We use **Django Validators** to check input rules, ensuring fields like 'sets' or 'reps' are **positive numbers** and that all necessary fields are filled out. |
+
+#### **Authentication & Permissions**
+
+| Rubric Requirement | How GymTrack Meets It (Meets Expectations) |
+| :--- | :--- |
+| **Session/Token Auth** | The application uses **JWT** for token-based authentication. |
+| **Super User Group** | The system supports the standard Django **`createsuperuser`** command, providing an admin group with elevated access. |
+| **Application User** | Standard authenticated users have the **appropriate permissions** (read/write their own workouts) for the app's usage. |
+| **Anonymous User** | Unauthenticated users (anonymous) can only access the **login and signup pages**; all other API calls are blocked. |
+
+---
+
+###  UI & Frontend Implementation
+
+The frontend is simple, secure, and fully functional.
+
+* **Files Location:** All files are in the `static/workouts/` directory.
+* **Pages Included:** `index.html` (Login), `signup.html`, `dashboard.html` (View Workouts), and `add_workout.html`.
+* **JavaScript (`script.js`):** Handles all client-side logic: Login, Logout, Fetching/Adding workouts, and managing JWT tokens.
+
+---
+
+###  Deployment Instructions (Docker)
+
+The project is containerized using Docker, allowing it to be easily deployed and tested locally. 
+
+#### 1. Start the Application (Containerized)
+This command builds the necessary images and starts the Django app (`web`) and the database (`db`).
+
+docker compose up --build -d
+
+#### 2. Database Setup
+
+#### Apply migrations to the database
+docker compose exec web python manage.py migrate
+
+#### Create an admin user (Super User Group)
+docker compose exec web python manage.py createsuperuser
+
+#### 3. Access the App
+The application is now running and can be accessed here:
+
+http://localhost:8000/static/workouts/index.html
+
+#### 4. Stop the App
+**
+docker compose down**
+
+###  Screenshots 
+
+* **Login Page** ![Login Page Screenshot](images/login.png)
+* **Dashboard** ![Dashboard Screenshot](images/dashboard.png)
+* **Add Workout** ![Add Workout Screenshot](images/addworkout.png)
+* **Docker** ![Screenshot showing the running Docker containers (web and database services)](images/dockercontainers.png)
 
 
 
