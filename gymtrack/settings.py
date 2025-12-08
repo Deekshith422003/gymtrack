@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-ou*bzx#v+--+7g2x3w^wiht8u)y#10&4th0)5n0z&%02-)hbri
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "gymtrack-593602226752.us-central1.run.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
