@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Workout</title>
+</head>
+<body>
+
+<a href="dashboard.html">  Back to Dashboard</a>
+
+<h2>Log New Workout</h2>
+
+<form onsubmit="saveWorkout(event)">
+
+    <label>Date:</label><br>
+    <input type="date" id="date" required><br><br>
+
+    <label>Exercise Name:</label><br>
+    <input type="text" id="exercise" placeholder="e.g., Bench Press" required><br><br>
+
+    <label>Sets:</label><br>
+    <input type="number" id="sets" min="1" value="1" required><br><br>
+
+    <label>Reps:</label><br>
+    <input type="number" id="reps" min="1" value="1" required><br><br>
+
+    <label>Duration (minutes):</label><br>
+    <input type="number" id="duration" min="1" value="1" required><br><br>
+
+    <label>Notes:</label><br>
+    <textarea id="notes"></textarea><br><br>
+
+    <button type="submit">Save Workout</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

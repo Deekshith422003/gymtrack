@@ -1,0 +1,57 @@
+body {
+    font-family: Arial;
+    background: #f3f3f3;
+    padding: 40px;
+}
+
+.nav {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.box {
+    width: 700px;
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.summary {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.summary td {
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th,
+.data-table td {
+    border-bottom: 1px dotted black;
+    padding: 8px;
+}
+
+.data-table th {
+    text-align: left;
+}
+
+.add-btn {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.add-btn a {
+    font-size: 16px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Workouts</title>
+</head>
+<body>
+
+<h2>Your Workouts</h2>
+
+<button onclick="logout()" style="float:right;">Logout</button>
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Exercise</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Duration</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+
+    <tbody id="workout-list"></tbody>
+</table>
+
+<br>
+<a href="add_workout.html">
+    <button>Add New Workout</button>
+</a>
+
+<script src="script.js"></script>
+<script>
+    getWorkouts();
+</script>
+
+</body>
+</html>
